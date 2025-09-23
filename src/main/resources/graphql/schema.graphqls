@@ -1,0 +1,49 @@
+# Book(id,title,author,publishedYear) -> Author(id,name,books)
+
+
+# Object Types
+
+type Book {
+    id: ID!
+    title: String
+    author: Author
+    publishedYear: Int
+}
+
+type Author {
+    id:ID!
+    name: String
+    books: [Book]!
+}
+
+# Operation Types (Query, Mutation, Subscription)
+
+type Query {
+    books: [Book]
+    booksWithFilter(filter: BookInput): [Book]!
+    book(id: ID!) : Book
+    authors: [Author]!
+    search(text:String): [SearchItem]!
+    booksPaginated(first:Int, after:String, last:Int, before:String): BookConnection
+}
+
+type Mutation {
+    addBook(title: String,authorName: String,publishedYear: Int): Book
+    deleteBook(id: Int!) : Boolean!
+}
+
+# Input types [BookFilter(authorName,publishedAfter)
+input CreateBookInput {
+    title: String
+    authorName: String
+    publishedYear: Int
+}
+
+input BookInput {
+    authorName: String
+    publishedAfter: Int
+}
+
+# Union
+
+union SearchItem = Author | Book
