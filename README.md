@@ -8,8 +8,8 @@ This repository demonstrates building a modern GraphQL API with Spring Boot 4, s
 - Multiple Request for multiple resources
 - Avoid REST API Explosion of endpoints
 - Strongly-typed Schema
-- Self Documenting
-- Developer Tooling
+  - Self Documenting
+  - Developer Tooling
 - Avoids API Versioning
 
 ## Presentation Agenda
