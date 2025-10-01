@@ -25,19 +25,19 @@
   - Strongly-typed Schema
   - Self Documenting
   - Developer Tooling
-- Schema First Design (Starting at 13:00 min)
+- Schema First Design
   - create `schema.graphqls`
   - Add Book & Author Object Types
   - Add Query Mappings (Operation Types)
   - Run Application → Inspect Schema Mapping Inspection Report
   - Implement data fetchers for books and book
-- GraphiQL (Starting at 23 min)
+- GraphiQL
   - https://github.com/graphql/graphiql
   - `application.properties`
   - `spring.graphql.graphiql.enabled=true` We don't actually need this because of devtools
   - Explore GraphiQL
   - Add an exception (book with id 99 not found)
-- Mutation Mapping (Starting at 30 min)
+- Mutation Mapping
   - Create Book
   - Delete book
 - Data Integration
@@ -45,7 +45,7 @@
   - [Query by Example](https://docs.spring.io/spring-graphql/reference/data.html#data.querybyexample)
   - [@GraphQLRepository](https://docs.spring.io/spring-graphql/reference/data.html#data.querybyexample.registration)
 - Performance Improvements
-  - Virt[BookRestControllerTest.java](src/test/java/dev/danvega/sb4books/BookRestControllerTest.java)ual Threads
+  - Virtual Threads
   - Batch Mapping
     - n+1 Problem & Solution
 - Union Type
