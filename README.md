@@ -3,6 +3,16 @@
 This repository demonstrates building a modern GraphQL API with Spring Boot 4, showcasing advanced 
 features like performance optimization, pagination, and virtual thread support.
 
+## Why GraphQL?
+
+- No more over-fetching
+- Multiple Request for multiple resources
+- Avoid REST API Explosion of endpoints
+- Strongly-typed Schema
+    - Self Documenting
+    - Developer Tooling
+- Avoids API Versioning
+
 ## Presentation Agenda
 
 This demo walks through building a complete GraphQL books API, covering the following key areas:
