@@ -3,6 +3,12 @@
 - Create the Application
   - start.spring.io
     - web,graphql,devtools
+    - Mention Transport Layers
+    - Tabs
+      - https://github.com/danvega/beyondrest
+      - https://start.spring.io/
+      - https://graphql.org/
+      - https://www.graphql-java.com/
   - Review the Application
     - Spring Boot 4 + Spring Framework 7
     - Review Dependencies
@@ -19,16 +25,19 @@
   - Strongly-typed Schema
   - Self Documenting
   - Developer Tooling
-- Schema First Design
+- Schema First Design (Starting at 13:00 min)
   - create `schema.graphqls`
   - Add Book & Author Object Types
   - Add Query Mappings (Operation Types)
   - Run Application → Inspect Schema Mapping Inspection Report
-- GraphiQL
+  - Implement data fetchers for books and book
+- GraphiQL (Starting at 23 min)
+  - https://github.com/graphql/graphiql
   - `application.properties`
   - `spring.graphql.graphiql.enabled=true` We don't actually need this because of devtools
   - Explore GraphiQL
-- Mutation Mapping
+  - Add an exception (book with id 99 not found)
+- Mutation Mapping (Starting at 30 min)
   - Create Book
   - Delete book
 - Data Integration
@@ -63,12 +72,10 @@ SpringOne Books
 https://github.com/danvega/spring-one-books 
 
 RestTestClient
-https://github.com/danvega/sb4/blob/master/src/test/java/dev/danvega/sb4/http_interface_clients/TodoControllerTest.java 
-
+https://github.com/danvega/sb4/blob/master/src/test/java/dev/danvega/sb4/http_interface_clients/TodoControllerTest.java
 
 Query By Example Blog Post
 https://www.danvega.dev/blog/spring-boot-graphql-query-by-example
-
 
 ## Notes
 
@@ -105,3 +112,28 @@ We will need this at some point
 - gqlb-test-book-rest-controller (Book Rest Controller Test)
 - gqlb-test-books-graphql-test (Books GraphQL Test)
 - gqlb-threads (Find Books by Author - Threads Demo)
+
+
+
+## Notes
+
+- have final code open in IDE
+- have starting code open in another IDE
+
+```graphql
+query FindBookByID($id: ID!) {
+  book(id: $id) {
+    id
+    title
+    author {
+      id
+      name
+    }
+    publishedYear
+  }
+}
+```
+
+{
+"id": "2"
+}
