@@ -1,6 +1,7 @@
 # Spring Boot 4 & GraphQL Books Demo
 
-This repository demonstrates building a modern GraphQL API with Spring Boot 4, showcasing advanced features like performance optimization, pagination, and virtual thread support.
+This repository demonstrates building a modern GraphQL API with Spring Boot 4, showcasing advanced 
+features like performance optimization, pagination, and virtual thread support.
 
 ## Presentation Agenda
 
