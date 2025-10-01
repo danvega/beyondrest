@@ -45,7 +45,7 @@
   - [Query by Example](https://docs.spring.io/spring-graphql/reference/data.html#data.querybyexample)
   - [@GraphQLRepository](https://docs.spring.io/spring-graphql/reference/data.html#data.querybyexample.registration)
 - Performance Improvements
-  - Virt[BookRestControllerTest.java](src/test/java/dev/danvega/sb4books/BookRestControllerTest.java)ual Threads
+  - Virtual Threads
   - Batch Mapping
     - n+1 Problem & Solution
 - Union Type
